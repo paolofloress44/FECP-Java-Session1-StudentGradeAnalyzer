@@ -80,7 +80,7 @@ class MainTest {
         File file = new File(CSV_FILE);
         boolean isNew = file.createNewFile();
 
-        try (PrintWriter writer = new PrintWriter(new FileWriter(file, true))) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(file))) {
             if (isNew) {
                 writer.println("Test Name,Input,Expected Output,Actual Output,Status,Timestamp");
             }
